@@ -1,0 +1,2 @@
+class Analyzer < ApplicationRecord
+end
