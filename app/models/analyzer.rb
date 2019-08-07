@@ -1,2 +1,0 @@
-class Analyzer < ApplicationRecord
-end
