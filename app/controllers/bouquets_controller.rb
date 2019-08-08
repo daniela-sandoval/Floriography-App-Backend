@@ -12,6 +12,12 @@ class BouquetsController < ApplicationController
     render json: bouquet
   end
 
+  def create_adj
+    bouquet = Bouquet.create(bouquet_params)
+    bouquet.makeAdjBouquet(params[:adjectives])
+    render json: bouquet
+  end
+
 
   private
 

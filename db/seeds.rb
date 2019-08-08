@@ -29,7 +29,7 @@ other = Tone.create(name: "Other")
 # ---------- ADJECTIVES ----------
 hatred = Adjective.create(name: "Hatred", tone_id: anger.id)
 jealous = Adjective.create(name: "Jealous", tone_id: anger.id)
-anxious = Adjective.create(name: "Nervous", tone_id: fear.id)
+anxious = Adjective.create(name: "Anxious", tone_id: fear.id)
 hopeless = Adjective.create(name: "Hopeless", tone_id: fear.id)
 love = Adjective.create(name: "Love", tone_id: joy.id)
 happiness = Adjective.create(name: "Happiness", tone_id: joy.id)

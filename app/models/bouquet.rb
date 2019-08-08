@@ -15,4 +15,21 @@ class Bouquet < ApplicationRecord
     matchedFlowers.each {|flower| BouquetFlower.create(bouquet_id: self.id, flower_id: flower.id)}
   end
 
+  def makeAdjBouquet(adjectives)
+    flowers = Flower.all
+    flower_types = {}
+    flowers.each do |flower|
+      if adjectives.include? flower.adjective.name
+        if flower_types[flower.adjective.name]
+          flower_types[flower.adjective.name] << flower
+        else
+          flower_types[flower.adjective.name] = []
+          flower_types[flower.adjective.name] << flower
+        end
+      end
+    end
+    random_flowers = flower_types.map{|adj, flowers| flowers.sample}
+    random_flowers.each {|flower| BouquetFlower.create(bouquet_id: self.id, flower_id: flower.id)}
+  end
+  
 end
