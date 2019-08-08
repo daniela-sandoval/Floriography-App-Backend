@@ -6,10 +6,10 @@ class BouquetsController < ApplicationController
   end
 
   def create
-    byebug
     tone = analyzeTone(params[:sentence])
     bouquet = Bouquet.create(bouquet_params)
-    bouquet.makeInputBouquet(tone, bouquet)
+    bouquet.makeInputBouquet(tone)
+    render json: bouquet
   end
 
 

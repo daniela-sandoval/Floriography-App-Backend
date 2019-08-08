@@ -9,8 +9,10 @@ class Bouquet < ApplicationRecord
 
   def makeInputBouquet(tone)
     matchedFlowers = []
+    flowers = Flower.all
+    # add some logic to make sure i get at LEAST 5 flowers
     matchedFlowers = flowers.select{|flower| flower.adjective.tone.name === tone}.sample(5)
     matchedFlowers.each {|flower| BouquetFlower.create(bouquet_id: self.id, flower_id: flower.id)}
   end
-  
+
 end
