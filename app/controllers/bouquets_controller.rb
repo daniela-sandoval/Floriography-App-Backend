@@ -6,9 +6,9 @@ class BouquetsController < ApplicationController
   end
 
   def create
-    tone = analyzeTone(params[:text])
     byebug
-    bouquet = Bouquet.create(params)
+    tone = analyzeTone(params[:sentence])
+    bouquet = Bouquet.create(bouquet_params)
     bouquet.makeInputBouquet(tone, bouquet)
   end
 
@@ -26,6 +26,10 @@ class BouquetsController < ApplicationController
       content_type: "application/json"
     )
     textTone = tone.result["document_tone"]["tones"][0]["tone_name"]
+  end
+
+  def bouquet_params
+    params.permit(:user_id, :name)
   end
 
 
