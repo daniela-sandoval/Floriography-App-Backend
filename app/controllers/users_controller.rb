@@ -10,9 +10,7 @@ class UsersController < ApplicationController
   end
 
   def profile
-    render json: super_current_user.to_json(include: {
-          bouquets: {include: :bouquet_flowers}
-        })
+    render json: super_current_user
   end
 
   def index

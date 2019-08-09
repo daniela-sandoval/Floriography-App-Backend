@@ -28,8 +28,9 @@ class Bouquet < ApplicationRecord
         end
       end
     end
+    byebug
     random_flowers = flower_types.map{|adj, flowers| flowers.sample}
     random_flowers.each {|flower| BouquetFlower.create(bouquet_id: self.id, flower_id: flower.id)}
   end
-  
+
 end

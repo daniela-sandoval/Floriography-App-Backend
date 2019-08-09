@@ -71,7 +71,6 @@ ambrosia = Flower.create(name: "Ambrosia", meaning: "Your love is reciprocated",
 ros_acacia = Flower.create(name: "Rose Acacia", meaning: "I hope we can be friends", img_url: "acacia_picc", adjective_id: tentative_adj.id)
 achillea = Flower.create(name: "Achillea", meaning: "War and the power to overcome is mine", img_url: "ach_pic", adjective_id: powerful.id)
 achimenes = Flower.create(name: "Achimenes", meaning: "Such worth is rare", img_url: "achi_pic", adjective_id: rarity.id)
-aconite = Flower.create(name: "Aconite", meaning: "I hate humans", img_url: "acon_pic", adjective_id: anger_adj.id)
 adder = Flower.create(name: "Adder's Tongue", meaning: "Totally jealous of you", img_url: "add_pic", adjective_id: jealous.id)
 adonis = Flower.create(name: "Adonis", meaning: "Sad memories", img_url: "adon_pic", adjective_id: sadness_adj.id)
 african_violet = Flower.create(name: "African Violent", meaning: "I am extremely faithful", img_url: "afri_pic", adjective_id: faithfulness.id)
