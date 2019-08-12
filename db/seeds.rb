@@ -24,7 +24,7 @@ sadness = Tone.create(name: "Sadness")
 analytical = Tone.create(name: "Analytical")
 confident = Tone.create(name: "Confident")
 tentative = Tone.create(name: "Tentative")
-other = Tone.create(name: "Other")
+# other = Tone.create(name: "Other")
 
 # ---------- ADJECTIVES ----------
 hatred = Adjective.create(name: "Hatred", tone_id: anger.id)
