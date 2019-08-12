@@ -18,6 +18,17 @@ class BouquetsController < ApplicationController
     render json: bouquet
   end
 
+  def create_rand
+    bouquet = Bouquet.create(bouquet_params)
+    bouquet.makeRandomBouquet
+    render json: bouquet
+  end
+
+  def destroy
+    bouquet = Bouquet.find(params[:id])
+    bouquet.destroy
+  end
+
 
   private
 

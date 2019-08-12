@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # post "/analyze", to: "analyzer#analyze"
 
   post '/bouquet_adj', to: "bouquets#create_adj"
+  post '/rand_bouquets', to: "bouquets#create_rand"
   post "/login", to: "auth#create"
   post '/signup', to: 'users#create'
   get '/profile', to: 'users#profile'
