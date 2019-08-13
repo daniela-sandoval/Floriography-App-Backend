@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   post '/bouquet_adj', to: "bouquets#create_adj"
   post '/rand_bouquets', to: "bouquets#create_rand"
+  get '/user_favorites', to: "favorites#user_favorites"
   post "/login", to: "auth#create"
   post '/signup', to: 'users#create'
   get '/profile', to: 'users#profile'

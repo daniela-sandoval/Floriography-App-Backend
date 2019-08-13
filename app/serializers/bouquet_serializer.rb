@@ -1,7 +1,5 @@
 class BouquetSerializer < ActiveModel::Serializer
-  attributes :id, :name, :bouquet_flowers
-
-  has_one :user
+  attributes :id, :name, :user, :bouquet_flowers
 
   def bouquet_flowers
     array = []
@@ -13,6 +11,13 @@ class BouquetSerializer < ActiveModel::Serializer
       array.push(bHash)
     end
     return array
+  end
+
+  def user
+    x = {}
+    x[:user_id] = object.user.id
+    x[:user_name] = object.user.username
+    return x
   end
 
 end
