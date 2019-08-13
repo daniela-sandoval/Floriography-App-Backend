@@ -1,5 +1,5 @@
 class FlowerSerializer < ActiveModel::Serializer
-  attributes :id, :name, :adjective, :tone
+  attributes :id, :name, :adjective, :tone, :meaning, :img_url
 
   def adjective
     {adjective_id: self.object.adjective.id, adjective_name: self.object.adjective.name}
