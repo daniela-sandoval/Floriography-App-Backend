@@ -11,7 +11,9 @@ class FavoritesController < ApplicationController
   end
 
   def user_favorites
-    byebug
+    user = User.find(params[:user_id])
+    favorites = user.favorites
+    render json: favorites
   end
 
   private
