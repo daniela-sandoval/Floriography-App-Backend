@@ -19,7 +19,7 @@ class FavoriteSerializer < ActiveModel::Serializer
 
   def user
     x = {}
-    x[:user_id] = object.user.id
+    x[:user_id] = object.bouquet.user.id
     x[:user_name] = object.bouquet.user.username
     return x
   end
