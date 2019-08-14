@@ -16,6 +16,11 @@ class FavoritesController < ApplicationController
     render json: favorites
   end
 
+  def destroy
+    bouquet = Bouquet.find(params[:id])
+    bouquet.destroy
+  end
+
   private
   def private_params
     params.permit(:user_id, :bouquet_id)
