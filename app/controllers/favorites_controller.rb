@@ -17,8 +17,8 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    bouquet = Bouquet.find(params[:id])
-    bouquet.destroy
+    fav = Favorite.find(params[:id])
+    fav.destroy
   end
 
   private
