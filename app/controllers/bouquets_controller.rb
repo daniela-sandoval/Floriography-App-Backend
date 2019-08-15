@@ -8,9 +8,15 @@ class BouquetsController < ApplicationController
 
   def create
     tone = analyzeTone(params[:sentence])
-    bouquet = Bouquet.create(bouquet_params)
-    bouquet.makeInputBouquet(tone)
-    render json: bouquet
+    # if the tone is nil then return an error in json
+    if tone === nil
+      render json: { errors: "Unfortunately we didn't find no dominant tone, please try again!" }, status: :unprocessable_entity
+    else
+      toneName = tone["tone_name"]
+      bouquet = Bouquet.create(bouquet_params)
+      bouquet.makeInputBouquet(toneName)
+      render json: bouquet
+    end
   end
 
   def create_adj
@@ -43,7 +49,7 @@ class BouquetsController < ApplicationController
       tone_input: {text: text},
       content_type: "application/json"
     )
-    textTone = tone.result["document_tone"]["tones"][0]["tone_name"]
+    textTone = tone.result["document_tone"]["tones"][0]
   end
 
   def bouquet_params
