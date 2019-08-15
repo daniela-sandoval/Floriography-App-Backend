@@ -7,13 +7,16 @@ class FavoritesController < ApplicationController
 
   def index
     favorites = Favorite.all
-    render json: favorites
+    sortedFavs = favorites.sort{|a, b| b.bouquet.created_at <=> a.bouquet.created_at}
+    debugger
+    render json: sortedFavs
   end
 
   def user_favorites
     user = User.find(params[:user_id])
     favorites = user.favorites
-    render json: favorites
+    sortedFavs = favorites.sort{|a, b| b.bouquet.created_at <=> a.bouquet.created_at}
+    render json: sortedFavs
   end
 
   def destroy

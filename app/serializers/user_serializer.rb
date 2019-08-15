@@ -3,11 +3,13 @@ class UserSerializer < ActiveModel::Serializer
 
   def bouquets
     array = []
-    object.bouquets.map do |bouquet|
+    sortedBouquets = object.bouquets.sort{|a, b| b.created_at <=> a.created_at}
+    sortedBouquets.map do |bouquet|
       bouquetHash = {}
       bouquetHash[:id] = bouquet.id
       bouquetHash[:name] = bouquet.name
       bouquetHash[:bouquet_flowers] = []
+      bouquetHash[:created_at] = bouquet.created_at
       bouquet.bouquet_flowers.map do |b_flower|
         bFlowerHash = {}
         bFlowerHash[:name] = b_flower.flower.name

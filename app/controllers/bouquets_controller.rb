@@ -2,7 +2,8 @@ class BouquetsController < ApplicationController
 
   def index
     bouquets = Bouquet.all
-    render json: bouquets
+    sortedBouquets = bouquets.sort{|a, b| b.created_at <=> a.created_at}
+    render json: sortedBouquets
   end
 
   def create

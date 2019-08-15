@@ -1,5 +1,5 @@
 class BouquetSerializer < ActiveModel::Serializer
-  attributes :id, :name, :user, :bouquet_flowers
+  attributes :id, :name, :user, :bouquet_flowers, :created_at
 
   def bouquet_flowers
     array = []

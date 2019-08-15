@@ -1,5 +1,5 @@
 class FavoriteSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :favoritor, :bouquet_id, :name, :user, :bouquet_flowers
+  attributes :id, :user_id, :favoritor, :bouquet_id, :name, :user, :bouquet_flowers, :created_at
 
   def bouquet_flowers
     array = []
@@ -26,6 +26,10 @@ class FavoriteSerializer < ActiveModel::Serializer
 
   def name
     object.bouquet.name
+  end
+
+  def created_at
+    object.bouquet.created_at
   end
 
 end
