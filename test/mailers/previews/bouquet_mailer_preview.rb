@@ -3,7 +3,10 @@ class BouquetMailerPreview < ActionMailer::Preview
 
   def email_bouquet
     # dont forget to put fake data
-    BouquetMailer.email_bouquet
+    sender = User.first
+    email = "daniela.sandoval820@yahoo.com"
+    bouquet = Bouquet.first
+    BouquetMailer.email_bouquet(sender, email, bouquet)
   end
 
 end
