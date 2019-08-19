@@ -1,0 +1,16 @@
+<h1>Bouquet#email_bouquet</h1>
+<h1><%= @user.username %> sent you a bouquet!</h1>
+
+
+<div class="flower_div">
+  <% @bouquet.bouquet_flowers.each do |bf| %>
+    <div class="flower">
+      <div class="flower_image" style="background-image: url(<%= bf.flower.img_url %>); height: 220px; width: 220px;">
+      </div>
+      <div class="flower_info">
+        <%= bf.flower.name %>
+        <p><%= bf.flower.meaning %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

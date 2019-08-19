@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :bouquets
+  attributes :id, :username, :bouquets, :email
 
   def bouquets
     array = []

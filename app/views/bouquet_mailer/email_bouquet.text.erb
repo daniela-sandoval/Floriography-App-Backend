@@ -1,0 +1,8 @@
+Bouquet#email_bouquet
+<%= @user.username %> sent you a bouquet!
+
+<%= @bouquet.name %>
+
+<% @bouquet.bouquet_flowers.each do |bf| %>
+  <%= bf.flower.name%>
+<% end %>

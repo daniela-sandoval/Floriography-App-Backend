@@ -18,6 +18,12 @@ class UsersController < ApplicationController
     render json: users
   end
 
+  def send_email
+    # need the person(id), the reciever email, and the bouquet ID
+    byebug
+    BouquetMailer.email_bouquet(sender, reciever, bouquet)
+  end
+
   private
 
   def user_params

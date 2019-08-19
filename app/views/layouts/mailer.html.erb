@@ -4,10 +4,42 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
       /* Email styles need to be inline */
+      p {
+        color: red;
+      }
+      .flower_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 20px;
+        margin: 1em;
+        padding: 10px;
+        box-shadow: 5px 7px grey;
+      }
+      .flower_image {
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        transition: 0.5s;
+        border: 2px solid black;
+        margin: 10px;
+      }
+      .flower_info {
+        display: none;
+      }
+      .flower:hover .flower_image{
+        filter: blur(4px) grayscale(3);
+      }
+      .flower:hover .flower_info {
+        display: block;
+      }
+
     </style>
   </head>
 
   <body>
     <%= yield %>
+    <p>Thanks!</p>
   </body>
 </html>

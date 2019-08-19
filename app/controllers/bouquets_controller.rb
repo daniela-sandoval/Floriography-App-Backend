@@ -8,7 +8,6 @@ class BouquetsController < ApplicationController
 
   def create
     tone = analyzeTone(params[:sentence])
-    # if the tone is nil then return an error in json
     if tone === nil
       render json: { errors: "Unfortunately we didn't find no dominant tone, please try again!" }, status: :unprocessable_entity
     else
