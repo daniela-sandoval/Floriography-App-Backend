@@ -3,6 +3,6 @@ class User < ApplicationRecord
   validates :username, uniqueness: { case_sensitive: false }
 
   has_many :bouquets, dependent: :destroy
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :favorited_bouquets, through: :favorites, class_name: 'Bouquet'
 end
