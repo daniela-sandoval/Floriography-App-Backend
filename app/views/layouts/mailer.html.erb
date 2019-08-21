@@ -4,43 +4,122 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
       /* Email styles need to be inline */
-      p {
-        color: red;
-      }
-      .flower_div {
+      body {
+        height: 100%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        border: 2px solid black;
-        border-radius: 20px;
-        margin: 1em;
-        padding: 10px;
-        box-shadow: 5px 7px grey;
+        font-family: Trebuchet MS;
       }
+
+      p {
+        margin: 0;
+      }
+
+      .header_div {
+        border: 3px solid #9EA2F2;
+        background-color: #C6C6F7;
+        border-radius: 20px;
+        margin: 27px;
+        padding: 20px;
+        box-shadow: 6px 6px #808080b5;
+        zoom: 0.7;
+        width: 40%;
+        text-align: center;
+      }
+
+      .bouquet_div {
+        border: 3px solid #9EA2F2;
+        background-color: #C6C6F7;
+        border-radius: 20px;
+        margin: 27px;
+        padding: 20px;
+        box-shadow: 6px 6px #808080b5;
+        zoom: 0.7;
+        width: 70%;
+      }
+
+      .header {
+        padding: 10px;
+        background-color: #e2e2f3;
+        border-radius: 10px;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .header p {
+        margin: 0;
+        margin: 5px;
+      }
+
+      .flower-con {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #e2e2f3;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 5px;
+        zoom: 1.6;
+      }
+
+      .box {
+        position: relative;
+        margin: 10px;
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+      }
+
       .flower_image {
         background-size: cover;
         background-position: center;
-        border-radius: 50%;
-        transition: 0.5s;
-        border: 2px solid black;
-        margin: 10px;
-      }
-      .flower_info {
-        display: none;
-      }
-      .flower:hover .flower_image{
-        filter: blur(4px) grayscale(3);
-      }
-      .flower:hover .flower_info {
+        height: 120px;
+        opacity: 1;
         display: block;
       }
 
+      .middle {
+        opacity: 0;
+        text-align: center;
+      }
+
+      .box:hover .flower_image {
+        opacity: 0
+      }
+
+      .box:hover {
+        background-color: #9EA2F2;
+        display: flex;
+        justify-content: center;
+      }
+
+      .box:hover .middle {
+        padding: 10px;
+        opacity: 1;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        width: inherit;
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+        top: 20%;
+      }
+
+      .end {
+        font-size: 15px;
+        margin: 5px;
+      }
     </style>
   </head>
 
   <body>
     <%= yield %>
-    <p>Powered By: </p>
-    <p>Daniela Sandoval 🌱🐈 & Flatiron School ❤️💻</p>
+    <p class="end">Powered By: </p>
+    <p class="end">Daniela Sandoval 🌱🐈 & Flatiron School ❤️💻</p>
   </body>
 </html>

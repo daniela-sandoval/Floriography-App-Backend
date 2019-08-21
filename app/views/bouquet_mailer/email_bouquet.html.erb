@@ -1,15 +1,21 @@
-<h1>🌱 <%= @user.username %> sent you a bouquet! 🌱</h1>
-<p>Hover over each flower to see what they sent </p>
+<h1 class="header_div">🌱 <%= @user.username %> sent you a bouquet! 🌱</h1>
+<p>Hover over each flower to see what they sent. </p>
 
-<div class="flower_div">
-  <% @bouquet.bouquet_flowers.each do |bf| %>
-    <div class="flower">
-      <div class="flower_image" style="background-image: url(<%= bf.flower.img_url %>); height: 220px; width: 220px;">
+<div class="bouquet_div">
+  <div class="header"><%= @bouquet.name %>
+    <p>made by: <%= @bouquet.user.username %> </p>
+  </div>
+  <div class="flower-con">
+    <% @bouquet.bouquet_flowers.each do |bf| %>
+      <div class="box">
+        <div class="flower_image" style="background-image: url(<%= bf.flower.img_url %>)">
+        </div>
+        <div class="middle"><%= bf.flower.name %><br>
+            <p style="margin-top: 5px"><%= bf.flower.meaning %></p>
+        </div>
       </div>
-      <div class="flower_info">
-        <%= bf.flower.name %>
-        <p><%= bf.flower.meaning %></p>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
+
+<p>Send <%= @user.username %> back a bouquet at <%= @user.email %>!</p>
