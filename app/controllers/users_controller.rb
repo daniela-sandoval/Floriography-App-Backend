@@ -13,11 +13,6 @@ class UsersController < ApplicationController
     render json: super_current_user
   end
 
-  def index
-    users = User.all
-    render json: users
-  end
-
   def send_email
     # need the person(id), the reciever email, and the bouquet ID
     sender = User.find(params[:user_id])
