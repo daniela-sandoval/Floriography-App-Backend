@@ -12,10 +12,6 @@ Flower.destroy_all
 Bouquet.destroy_all
 
 # ---------- USER ----------
-daniela = User.create(username: "Daniela", password: "cats", email: "daniela.sandoval820@gmail.com")
-
-mochi = User.create(username: "Mochi", password: "123", email: "mochi@gmail.com")
-
 # ---------- TONES ----------
 anger = Tone.create(name: "Anger")
 fear = Tone.create(name: "Fear")
