@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   def send_email
     # need the person(id), the reciever email, and the bouquet ID
-    sender = User.find_by(params[:id])
+    sender = User.find(params[:user_id])
     reciever = params[:email_to]
     bouquet = Bouquet.find(params[:bouquet])
     BouquetMailer.email_bouquet(sender, reciever, bouquet).deliver_now
