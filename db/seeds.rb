@@ -163,9 +163,6 @@ xeranthemum = Flower.create(name: "Xeranthemum ", meaning: "Cheerful in the face
 zephyranthes = Flower.create(name: "Zephyranthes", meaning: "Fond caresses", img_url: "https://cdn.shopify.com/s/files/1/1419/7120/products/Zephyranthes_Robusta.SHUT_1024x.jpg?v=1551749436", adjective_id: love.id)
 
 # ---------- BOUQUET ----------
-# dan_bouq = Bouquet.create(name: "My first test", user_id: daniela.id)
-# dan_bouq_two = Bouquet.create(name: "My second test", user_id: daniela.id)
-# mochi = Bouquet.create(name: "My third test", user_id: mochi.id)
 # ---------- BOUQUET FLOWERS ----------
 
 # --------- FAVORITES ----------
