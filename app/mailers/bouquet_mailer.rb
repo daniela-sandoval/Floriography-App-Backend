@@ -10,7 +10,7 @@ class BouquetMailer < ApplicationMailer
     @user = sender
     @email = reciever
     @bouquet = bouquet
-    mail to: @email, subject: "#{@user.username} sent you a bouquet!"
+    mail to: @email, subject: "A bouquet has been made for you!"
   end
 
 end

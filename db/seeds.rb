@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-Tone.destroy_all
 Adjective.destroy_all
+Tone.destroy_all
 Flower.destroy_all
 Bouquet.destroy_all
 
@@ -85,7 +85,7 @@ begonia = Flower.create(name: "Begonia", meaning: "Please beware", img_url: "htt
 bird_para = Flower.create(name: "Bird Of Paradise", meaning: "Extremely faithful", img_url: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/bird-of-paradise-flower-pierre-leclerc-photography.jpg", adjective_id: faithfulness.id)
 black_thorn = Flower.create(name: "Blackthorn", meaning: "I have changed radically", img_url: "https://cdn.shopify.com/s/files/1/1186/5156/products/Blackthorn_86db6db5-5e9d-4f8e-91f4-006e0901def8_1024x1024.jpeg?v=1456914725", adjective_id: analytical_adj.id)
 borage = Flower.create(name: "Borage", meaning: "You're rude...", img_url: "https://cdn11.bigcommerce.com/s-2ba96/images/stencil/1200x1800/products/717/1193/Borage_Borago_officinalis__57032.1452727262.jpg?c=2", adjective_id: hatred.id)
-butterfly = Flower.create(name: "Butterful Weed", meaning: "If you love me, please let me go", img_url: "https://www.waysidegardens.com/images/xxl/49296.jpg", adjective_id: analytical_adj.id)
+butterfly = Flower.create(name: "Butterfly Weed", meaning: "If you love me, please let me go", img_url: "https://www.waysidegardens.com/images/xxl/49296.jpg", adjective_id: analytical_adj.id)
 cypress = Flower.create(name: "Cypress", meaning: "Symbolizes hopelessness", img_url: "https://worldoffloweringplants.com/wp-content/uploads/2017/11/Ipomoea-quamoclit-Cypress-Vine4.jpg", adjective_id: hopeless.id)
 cape_jas = Flower.create(name: "Cape Jasmine", meaning: "I am too happy", img_url: "https://cdn.webvanta.com/000000/51/74/slider_detail/uploads/plant/1502802185-0d964b19baa37b919/30631025_m-3.jpg", adjective_id: happiness.id)
 camellia = Flower.create(name: "Pink Camellia", meaning: "Longing for you", img_url: "https://stmed.net/sites/default/files/camellia-wallpapers-27795-2349876.jpg", adjective_id: yearn.id)
@@ -163,9 +163,6 @@ xeranthemum = Flower.create(name: "Xeranthemum ", meaning: "Cheerful in the face
 zephyranthes = Flower.create(name: "Zephyranthes", meaning: "Fond caresses", img_url: "https://cdn.shopify.com/s/files/1/1419/7120/products/Zephyranthes_Robusta.SHUT_1024x.jpg?v=1551749436", adjective_id: love.id)
 
 # ---------- BOUQUET ----------
-# dan_bouq = Bouquet.create(name: "My first test", user_id: daniela.id)
-# dan_bouq_two = Bouquet.create(name: "My second test", user_id: daniela.id)
-# mochi = Bouquet.create(name: "My third test", user_id: mochi.id)
 # ---------- BOUQUET FLOWERS ----------
 
 # --------- FAVORITES ----------
