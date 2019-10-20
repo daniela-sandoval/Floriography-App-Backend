@@ -12,7 +12,7 @@ This is a Ruby on Rails API created using ActiveRecord.
 5. Finally, run `rails s` and copy the url in your terminal (more than likely localhost:3000) and open up your browser using the url.
 6. Going to urls such as `/flowers`, `/bouquets`, `/tones`,  `favorites`, and `adjectives` leads to data in json format.
 
-## How to Use Medical Tracker
+## How to Use Floriography API
 Floriography API is needed in order to give the Florigraphy Application (frontend) the ability to:
 * Create, delete, and read bouquets based on adjectives.
 * Bouquets can also be created with user input by contacting the third party API Watson Tone Analyzer in the bouquet controller.
