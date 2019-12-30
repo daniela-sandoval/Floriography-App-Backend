@@ -59,6 +59,8 @@ GEM
       activesupport
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    ddtrace (0.30.0)
+      msgpack
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.8.0)
@@ -179,6 +181,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
+  ddtrace
   ibm_watson
   jwt
   listen (>= 3.0.5, < 3.2)
